@@ -1,5 +1,5 @@
 import { Component, OnInit, computed } from '@angular/core';
-import { TransactionService } from '../../services/transaction';
+import { TransactionService } from '../../../../core/services/transaction.service';
 import { TransactionComponent } from '../transaction/transaction';
 import { CommonModule } from '@angular/common';
 
@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
 export class TransactionListComponent implements OnInit {
   transactions = computed(() => this.transactionService.transactions());
 
-  constructor(private transactionService: TransactionService) {}
+  constructor(private transactionService: TransactionService) { }
 
   ngOnInit() {
     this.transactionService.getTransactions();

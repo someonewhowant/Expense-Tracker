@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './components/header/header';
-import { BalanceComponent } from './components/balance/balance';
-import { IncomeExpensesComponent } from './components/income-expenses/income-expenses';
-import { TransactionListComponent } from './components/transaction-list/transaction-list';
-import { AddTransactionComponent } from './components/add-transaction/add-transaction';
+import {
+  HeaderComponent,
+  BalanceComponent,
+  IncomeExpensesComponent,
+  TransactionListComponent,
+  AddTransactionComponent,
+} from './features/transactions/components';
 
 @Component({
   selector: 'app-root',
@@ -17,4 +19,4 @@ import { AddTransactionComponent } from './components/add-transaction/add-transa
   ],
   templateUrl: './app.html',
 })
-export class AppComponent {}
+export class AppComponent { }

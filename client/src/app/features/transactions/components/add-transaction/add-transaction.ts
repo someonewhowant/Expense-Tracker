@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TransactionService } from '../../services/transaction';
+import { TransactionService } from '../../../../core/services/transaction.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({

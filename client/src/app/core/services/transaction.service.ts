@@ -1,30 +1,18 @@
 import { Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-export interface Transaction {
-  id?: number;
-  text: string;
-  amount: number;
-  createdAt?: Date;
-}
-
-interface TransactionsResponse {
-  success: boolean;
-  count?: number;
-  data: Transaction[] | Transaction;
-}
+import { Transaction, TransactionsResponse } from '../models/transaction.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TransactionService {
   private apiUrl = '/api/v1/transactions';
-  
+
   transactions = signal<Transaction[]>([]);
   error = signal<string | null>(null);
   loading = signal<boolean>(false);
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getTransactions() {
     this.loading.set(true);

@@ -1,6 +1,6 @@
 import { Component, computed } from '@angular/core';
-import { TransactionService } from '../../services/transaction';
-import { FormatNumberPipe } from '../../pipes/format-number-pipe';
+import { TransactionService } from '../../../../core/services/transaction.service';
+import { FormatNumberPipe } from '../../../../shared/pipes/format-number.pipe';
 
 @Component({
   selector: 'app-balance',

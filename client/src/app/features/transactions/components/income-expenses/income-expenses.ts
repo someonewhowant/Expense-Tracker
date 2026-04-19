@@ -1,6 +1,6 @@
 import { Component, computed } from '@angular/core';
-import { TransactionService } from '../../services/transaction';
-import { FormatNumberPipe } from '../../pipes/format-number-pipe';
+import { TransactionService } from '../../../../core/services/transaction.service';
+import { FormatNumberPipe } from '../../../../shared/pipes/format-number.pipe';
 
 @Component({
   selector: 'app-income-expenses',
@@ -34,5 +34,5 @@ export class IncomeExpensesComponent {
       .reduce((acc, item) => (acc += item), 0);
   });
 
-  constructor(private transactionService: TransactionService) {}
+  constructor(private transactionService: TransactionService) { }
 }
