@@ -1,34 +1,34 @@
-Примерно как из курса от Traversy Media только построенное на стеке NestJS, Angular и использует встраиваемую SQLite
+# Логгер доходов/расходов
 
-📂 Структура проекта
-├── client/          # Исходники Angular
-├── server/          # Исходники NestJS приложения
-├── package.json     # Скрипты управления проектом
-└── README.md        # И так понятно
-📦 Запуск:
-Клонируем репозиторий
+Примерно такой же как из курса от Travesy Media только на стеке **Angular**, **NestJS** и **SQLite**
 
-git clone https://github.com/ваш-логин/expense-tracker-pro.git
-cd expense-tracker-pro
-Вытаскиваем нужные зависимости. В корневой директории выполняем:
+## 🏁 Запуск
 
-npm install
-Добавим затем зависимости сервера:
+### Нужно иметь:
+- Node.js (рекомендуется v24 или выше)
+- npm
 
-cd server && npm install && cd ..
-Подтянем зависимости клиента
+### Установка
 
-cd client && npm install && cd ..
-🚦 Запуск приложения
-Режим разработки (Development)
-Запускает одновременно сервер NestJS (порт 5000) и Angular dev-server (порт 4200).
+1. Клонируем репозиторий:
+   ```bash
+   git clone https://github.com/someonewhowant/Expense-Tracker.git
+   cd Expense-Tracker
+   ```
 
+2. Устанавливаем зависимости для корня, клиента и сервера:
+   ```bash
+   npm install && npm install --prefix client && npm install --prefix server
+   ```
+
+### Запуск приложения
+
+Чтобы запустить бэкенд и фронтенд одновременно в режиме разработки:
+
+```bash
 npm run dev
-Продакшн сборка (Production)
-Собирает клиентскую и серверную части, после чего запускает готовое приложение.
+```
 
-npm start
-📡 API Endpoints
-GET /api/v1/transactions — Получить все транзакции.
-POST /api/v1/transactions — Добавить новую транзакцию.
-DELETE /api/v1/transactions/:id — Удалить транзакцию по ID.
+Приложение будет доступно по адресам:
+- **Frontend**: [http://localhost:4200](http://localhost:4200)
+- **Backend API**: [http://localhost:5000/api/v1](http://localhost:5000/api/v1)

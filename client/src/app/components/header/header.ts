@@ -3,6 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  template: `<h2>Expense Tracker</h2>`,
+  template: `<h1>Expense Tracker</h1>`,
 })
-export class HeaderComponent {}
+export class HeaderComponent { }

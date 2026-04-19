@@ -1,5 +1,7 @@
 <li [ngClass]="transaction.amount < 0 ? 'minus' : 'plus'">
-  {{ transaction.text }}
-  <span>{{ transaction.amount < 0 ? '-' : '+' }}${{ transaction.amount | formatNumber }}</span>
-  <button (click)="onDelete()" class="delete-btn">x</button>
+  <span class="text">{{ transaction.text }}</span>
+  <span class="amount">
+    {{ transaction.amount < 0 ? '-' : '+' }}${{ (transaction.amount < 0 ? -transaction.amount : transaction.amount) |
+      formatNumber }} </span>
+      <button (click)="onDelete()" class="delete-btn" aria-label="Delete transaction">&times;</button>
 </li>

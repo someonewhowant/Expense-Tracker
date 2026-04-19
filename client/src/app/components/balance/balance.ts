@@ -7,8 +7,10 @@ import { FormatNumberPipe } from '../../pipes/format-number-pipe';
   standalone: true,
   imports: [FormatNumberPipe],
   template: `
-    <h4>Your Balance</h4>
-    <h1>\${{ balance() | formatNumber }}</h1>
+    <div class="balance-container">
+      <h4>Your Balance</h4>
+      <h1 id="balance">\${{ balance() | formatNumber }}</h1>
+    </div>
   `,
 })
 export class BalanceComponent {
@@ -17,5 +19,5 @@ export class BalanceComponent {
     return amounts.reduce((acc, item) => (acc += item), 0);
   });
 
-  constructor(private transactionService: TransactionService) {}
+  constructor(private transactionService: TransactionService) { }
 }
