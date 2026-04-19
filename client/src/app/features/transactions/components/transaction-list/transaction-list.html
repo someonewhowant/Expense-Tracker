@@ -1,1 +1,4 @@
-<p>transaction-list works!</p>
+<h3>History</h3>
+<ul class="list">
+  <app-transaction *ngFor="let transaction of transactions()" [transaction]="transaction"></app-transaction>
+</ul>

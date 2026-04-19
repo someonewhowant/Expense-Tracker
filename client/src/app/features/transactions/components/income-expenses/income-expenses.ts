@@ -6,18 +6,7 @@ import { FormatNumberPipe } from '../../../../shared/pipes/format-number.pipe';
   selector: 'app-income-expenses',
   standalone: true,
   imports: [FormatNumberPipe],
-  template: `
-    <div class="inc-exp-container">
-      <div>
-        <h4>Income</h4>
-        <p class="money plus">+$\{{ income() | formatNumber }}</p>
-      </div>
-      <div>
-        <h4>Expense</h4>
-        <p class="money minus">-$\{{ expense() | formatNumber }}</p>
-      </div>
-    </div>
-  `,
+  templateUrl: './income-expenses.html',
 })
 export class IncomeExpensesComponent {
   income = computed(() => {

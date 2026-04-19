@@ -7,15 +7,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-transaction-list',
   standalone: true,
   imports: [CommonModule, TransactionComponent],
-  template: `
-    <h3>History</h3>
-    <ul class="list">
-      <app-transaction
-        *ngFor="let transaction of transactions()"
-        [transaction]="transaction"
-      ></app-transaction>
-    </ul>
-  `,
+  templateUrl: './transaction-list.html',
 })
 export class TransactionListComponent implements OnInit {
   transactions = computed(() => this.transactionService.transactions());

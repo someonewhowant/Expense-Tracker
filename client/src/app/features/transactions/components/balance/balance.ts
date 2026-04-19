@@ -6,12 +6,7 @@ import { FormatNumberPipe } from '../../../../shared/pipes/format-number.pipe';
   selector: 'app-balance',
   standalone: true,
   imports: [FormatNumberPipe],
-  template: `
-    <div class="balance-container">
-      <h4>Your Balance</h4>
-      <h1 id="balance">\${{ balance() | formatNumber }}</h1>
-    </div>
-  `,
+  templateUrl: './balance.html',
 })
 export class BalanceComponent {
   balance = computed(() => {
